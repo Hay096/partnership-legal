@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — PartnerShip</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #262b35;
+    --text: #e6e8ec;
+    --muted: #9aa1ac;
+    --accent: #8b7ffb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 19px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  p, li {
+    color: #cdd1d8;
+    font-size: 15px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Política de Privacidade — PartnerShip</h1>
+    <div class="updated">Última atualização: 13 de julho de 2026</div>
+  </header>
+
+  <p>Esta Política de Privacidade descreve quais dados o bot <strong>PartnerShip</strong> ("o Bot", "nós") coleta ao ser usado em um servidor Discord, como esses dados são usados, armazenados e por quanto tempo são retidos. Ao adicionar o Bot ao seu servidor ou interagir com seus comandos, você concorda com as práticas descritas aqui.</p>
+
+  <h2>1. Dados que coletamos</h2>
+  <p>Ao ser configurado em um servidor, o Bot armazena:</p>
+  <ul>
+    <li>ID do servidor (guild ID), ID do canal e ID da categoria configurados para parcerias.</li>
+    <li>O texto promocional configurado pelo administrador do servidor.</li>
+    <li>Tags de interesse selecionadas pelo administrador, usadas para pareamento com outros servidores.</li>
+    <li>IDs de mensagens de parceria publicadas pelo Bot, usados internamente para permitir renovação e recuperação em caso de exclusão acidental do canal.</li>
+    <li>Links de convite extraídos de mensagens explicitamente designadas pelo administrador durante o comando de migração manual (<code>/migrar-parceria</code>).</li>
+    <li>Nomes de canais, categorias e cargos públicos, e a descrição do servidor, usados apenas na verificação automatizada de conformidade com as Community Guidelines do Discord.</li>
+  </ul>
+
+  <div class="card">
+    <p><strong>Sobre o Message Content Intent:</strong> quando ativo, o Bot processa o conteúdo de mensagens apenas nestes dois casos específicos:</p>
+    <ul>
+      <li>Mensagens no canal designado como origem durante <code>/migrar-parceria</code>, exclusivamente para extrair links de convite já postados ali pelo próprio administrador.</li>
+      <li>A mensagem de uma parceria manual, exclusivamente para identificar uma possível menção de representante do servidor.</li>
+    </ul>
+    <p class="note">O Bot não armazena o texto completo dessas mensagens. Ele extrai apenas o dado relevante (o link de convite, ou o ID do usuário mencionado) e descarta o restante do conteúdo imediatamente após o processamento.</p>
+  </div>
+
+  <h2>2. Dados que não coletamos</h2>
+  <ul>
+    <li>O Bot não lê, processa ou armazena o conteúdo de mensagens de usuários fora dos dois fluxos explícitos descritos acima.</li>
+    <li>O Bot não coleta dados de presença (status online, offline, ausente, ou atividade em jogos).</li>
+    <li>O Bot não coleta, armazena ou processa conteúdo de canais privados ou invisíveis para @everyone.</li>
+    <li>O Bot não vende, aluga, compartilha ou transfere dados a redes de anúncio, data brokers, ou qualquer serviço de terceiros não essencial à sua operação.</li>
+  </ul>
+
+  <h2>3. Como usamos os dados</h2>
+  <p>Os dados coletados são usados exclusivamente para operar as funcionalidades do Bot: parear servidores compatíveis com base em tags de interesse, publicar e renovar mensagens de parceria mutuamente configuradas, recuperar a configuração de um servidor em caso de exclusão acidental do canal de parcerias, e verificar conformidade básica com as diretrizes de conteúdo do Discord para proteger a rede de parcerias contra uso indevido.</p>
+
+  <h2>4. Retenção de dados</h2>
+  <p>Dados de configuração de um servidor (canal, texto, tags, IDs de mensagem) são mantidos enquanto o Bot permanecer instalado nesse servidor. Ao remover o Bot de um servidor, esses dados são mantidos por até 30 dias, para permitir que o administrador reinstale o Bot sem perder a configuração; após esse período, os dados são excluídos permanentemente. Dados extraídos temporariamente durante o processamento de uma mensagem (como o texto usado para localizar um link de convite) não são retidos após a conclusão da ação correspondente.</p>
+
+  <h2>5. Compartilhamento de dados</h2>
+  <p>Não compartilhamos dados com terceiros, exceto quando estritamente necessário para operar a infraestrutura do Bot (por exemplo, o provedor de hospedagem do banco de dados), e sempre sob obrigação de confidencialidade equivalente à descrita nesta política. Não usamos os dados coletados para treinar modelos de machine learning ou inteligência artificial.</p>
+
+  <h2>6. Seus direitos</h2>
+  <p>Administradores de servidor podem, a qualquer momento, remover o Bot do servidor, o que interrompe imediatamente qualquer atividade de parceria envolvendo aquele servidor. Para solicitar a exclusão antecipada dos dados de um servidor, ou esclarecer dúvidas sobre esta política, entre em contato pelos canais listados na seção 8.</p>
+
+  <h2>7. Alterações a esta política</h2>
+  <p>Esta política pode ser atualizada periodicamente. Alterações relevantes serão comunicadas através do servidor de suporte oficial do Bot. O uso continuado do Bot após uma atualização constitui aceitação da política revisada.</p>
+
+  <h2>8. Contato</h2>
+  <p>Para dúvidas sobre esta Política de Privacidade ou sobre o tratamento de dados pelo PartnerShip, entre em contato através do nosso servidor de suporte oficial no Discord.</p>
+
+  <footer>
+    PartnerShip — Política de Privacidade
+  </footer>
+
+</div>
+</body>
+</html>
